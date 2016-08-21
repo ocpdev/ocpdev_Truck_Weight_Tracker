@@ -1,0 +1,95 @@
+<div>
+	<div id="includedContent" class="col-sm-2"></div>
+	<div class="col-sm-10">
+		<!--<div class="col-sm-12">{{title}}</div>-->
+		<div class="col-sm-12 btn-group row"> 
+			<div class="col-sm-6 btn btn-default" data-ng-click="addFirstWeight()">
+				Initial Weight
+			</div>
+			<div class="col-sm-6 btn btn-default" data-ng-disabled="trigger" data-ng-click="addSecondWeight()">
+				Second Weight
+			</div>
+		</div>
+		<div class="col-sm-12 row">
+		  <div class="col-sm-2">
+			<label>Ticket No.</label>
+		  </div>
+		  <div class="col-sm-3">
+			<input type="textbox" data-ng-model="details.ticket_no"/>
+		  </div>
+		  <div class="col-sm-1">&nbsp;</div>
+		  <div class="col-sm-2">
+			<label>Date</label>
+		  </div>
+		  <div class="col-sm-3">
+			<label>{{details.date}}</label>
+		  </div>
+		</div>
+		<div class="col-sm-12 row">
+		  <div class="col-sm-2">
+			<label>Customer</label>
+		  </div>
+		  <div class="col-sm-3">
+			<input type="textbox" data-ng-model="details.customer"/>
+		  </div>
+		  <div class="col-sm-1">&nbsp;</div>
+		  <div class="col-sm-2">
+			<label>1st Weight</label>
+		  </div>
+		  <div class="col-sm-3">
+			<input type="textbox" data-ng-model="details.first_weight" disabled/>
+		  </div>
+		</div>
+		<div class="col-sm-12 row">
+		  <div class="col-sm-2">
+			<label>Commodity</label>
+		  </div>
+		  <div class="col-sm-3">
+			<input type="textbox" data-ng-model="details.commodity"/>
+		  </div>
+		  <div class="col-sm-1">&nbsp;</div>
+		  <div class="col-sm-2">
+			<label>2nd Weight</label>
+		  </div>
+		  <div class="col-sm-3">
+			<input type="textbox" data-ng-model="details.second_weight" data-ng-change="netWeightComp(details.first_weight, details.second_weight)" disabled/>
+		  </div>
+		</div>
+		<div class="col-sm-12 row">
+		  <div class="col-sm-2">
+			<label>Plate No.</label>
+		  </div>
+		  <div class="col-sm-3">
+			<input type="textbox" data-ng-model="details.plate_no"/>
+		  </div>
+		  <div class="col-sm-1">&nbsp;</div>
+		  <div class="col-sm-2">
+			<label>Net Weight</label>
+		  </div>
+		  <div class="col-sm-3">
+			<input type="textbox" data-ng-model="net_weight" disabled/>
+		  </div>
+		</div>
+		<div class="col-sm-12 row">
+		  <div class="col-sm-2">
+			<label>Note</label>
+		  </div>
+		  <div class="col-sm-3">
+			<textarea data-ng-model="details.note"></textarea>
+		  </div>
+		  <div class="col-sm-1">&nbsp;</div>
+		  <div class="col-sm-2">
+			<label>Weigher</label>
+		  </div>
+		  <div class="col-sm-2">
+			<input type="textbox" data-ng-model="weigher"/>
+		  </div>
+		</div>
+		<div class="col-sm-12 row">
+			<div class="btn btn-default col-sm-12" data-ng-click="addDetail(details)">ADD</div>
+		</div>
+		<div class="col-sm-12 row" >
+		  <div id="includedTableContent" data-ng-controller="detailListCtrl"></div>
+		</div>
+	</div>
+</div>

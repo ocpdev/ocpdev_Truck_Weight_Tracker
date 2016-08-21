@@ -1,0 +1,37 @@
+<table class="table">
+			<tr>
+			  <th></th>
+			  <th>
+				<label>Weighing Date</label>
+			  </th>
+			  <th>
+				<label>Ticket No.</label>
+			  </th>
+			  <th>
+				<label>Plate No.</label>
+			  </th>
+			  <th></th>
+			</tr>
+			<tr data-ng-repeat="d in detailList">
+			  <td>
+				<input type="checkbox" ng-model="d.check"/>
+			  </td>
+			  <td>
+				<label>{{d.date}}</label>
+			  </td>
+			  <td>
+				<label>{{d.ticket_no}}</label>
+			  </td>
+			  <td>
+				<label>{{d.plate_no}}</label>
+			  </td>
+			  <td class="btn-group col-sm-12">
+				<div class="btn btn-default col-sm-6 text-center" data-ng-click="edit(link)">
+					<span class="glyphicon glyphicon-edit"></span>
+				</div>
+				<div class="btn btn-default col-sm-6 text-center" data-ng-click="deletePopUp(link)">
+					<span class="glyphicon glyphicon-minus"></span>
+				</div>
+			  </td>
+			</tr>
+		  </table>

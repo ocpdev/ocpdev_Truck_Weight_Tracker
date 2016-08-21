@@ -1,0 +1,7 @@
+{
+    "name": "your-app",
+    "description": "electron app",
+    "version": "1.0.0",
+    "author": "Christian Oller <christianpauloller@gmail.com>",
+    "main": "mainApp.js"
+}
