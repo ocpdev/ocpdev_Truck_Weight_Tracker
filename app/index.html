@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-ng-app="combineModule">
   <head>
-    <title>Project X</title>
+    <title>Truck Weight Tracker</title>
 	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,8 +24,15 @@
 	<div class="container">&nbsp;
 	</div>
     <div class="text-right well blockquote container" data-ng-controller="mainCtrl">
-		<h1>{{weight}} kg</h1>
+	<div class="text-left">
+	<img src="images/miningemblem.jpg"/>
 	</div>
+		<h1>{{weight}} kg</h1>
+		<div>
+		Interbatch Corporation
+		</div>
+	</div>
+	
 	<div class="container">
 		<ui-view></ui-view>
 	</div>
